@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contextual Vocab Helper</title>
+    <link rel="stylesheet" href="../css/popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Loading State -->
+        <div id="loadingState" class="state">
+            <div class="spinner"></div>
+            <p>Looking up definition for "<strong id="loadingSelection"></strong>"...</p>
+            <p class="subtle">(Ensure your Gemini API Key is set in options)</p>
+        </div>
+
+        <!-- Error State -->
+        <div id="errorState" class="state" style="display: none;">
+            <h2>Error</h2>
+            <p id="errorMessage"></p>
+            <p class="subtle">Selection: "<strong id="errorSelection"></strong>"</p>
+            <button id="openOptionsButton">Check API Key</button>
+        </div>
+
+         <!-- No Selection State -->
+         <div id="noSelectionState" class="state" style="display: none;">
+            <h2>No Text Selected</h2>
+            <p>Please select text on a webpage and right-click to use the "Define with Contextual Vocab Helper" option.</p>
+         </div>
+
+        <!-- Results State -->
+        <div id="resultsState" class="state" style="display: none;">
+             <div class="result-header">
+                <h2 id="resultSelectedText"></h2> <!-- Selected text as title -->
+                <button id="copyButton" title="Copy results as Markdown">Copy</button>
+            </div>
+            <div id="resultsContent" class="markdown-body">
+                <!-- Markdown content will be rendered here -->
+            </div>
+            <p class="subtle context-preview" id="contextPreview" title="Context used for lookup"></p>
+        </div>
+    </div>
+
+    <!-- Include the Markdown library -->
+    <script src="../lib/marked.min.js"></script>
+    <!-- Include the popup logic script -->
+    <script src="../js/popup.js"></script>
+</body>
+</html>

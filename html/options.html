@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contextual Vocab Helper Options</title>
+    <link rel="stylesheet" href="../css/options.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contextual Vocab Helper Settings</h1>
+
+        <div class="form-group">
+            <label for="apiKey">Google Gemini API Key:</label>
+            <input type="password" id="apiKey" name="apiKey" placeholder="Enter your Gemini API Key" required>
+            <p class="help-text">
+                Your API key is stored securely using Chrome's storage and is only used to communicate with the Gemini API.
+                Get your key from <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a>.
+            </p>
+        </div>
+
+        <button id="saveButton">Save Key</button>
+        <p id="statusMessage" class="status-message"></p> <!-- For feedback -->
+
+    </div>
+
+    <script src="../js/options.js"></script>
+</body>
+</html>

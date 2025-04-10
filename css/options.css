@@ -1,0 +1,115 @@
+/* css/options.css */
+
+:root {
+    --bg-color: #202124; /* Dark background */
+    --text-color: #e8eaed; /* Light text */
+    --input-bg: #303134;  /* Slightly lighter input background */
+    --input-border: #5f6368; /* Subtle border */
+    --button-bg: #8ab4f8; /* Google-ish blue button */
+    --button-text: #202124; /* Dark text on button */
+    --button-hover-bg: #aecbfa;
+    --link-color: #8ab4f8;
+    --success-color: #81c995; /* Green for success */
+    --error-color: #f28b82; /* Red for error */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+    min-width: 400px; /* Ensure options page has some width */
+}
+
+.container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--text-color);
+    border-bottom: 1px solid var(--input-border);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="password"],
+input[type="text"] { /* In case you change type later */
+    width: calc(100% - 22px); /* Adjust for padding and border */
+    padding: 10px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--input-border);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+input[type="password"]:focus,
+input[type="text"]:focus {
+    outline: none;
+    border-color: var(--button-bg);
+    box-shadow: 0 0 0 2px rgba(138, 180, 248, 0.4); /* Subtle focus glow */
+}
+
+.help-text {
+    font-size: 0.9em;
+    color: #bdc1c6; /* Slightly dimmer text */
+    margin-top: 8px;
+}
+
+.help-text a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.help-text a:hover {
+    text-decoration: underline;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.status-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.status-message.success {
+    background-color: rgba(129, 201, 149, 0.2); /* Lighter success bg */
+    color: var(--success-color);
+    border: 1px solid var(--success-color);
+}
+
+.status-message.error {
+    background-color: rgba(242, 139, 130, 0.2); /* Lighter error bg */
+    color: var(--error-color);
+    border: 1px solid var(--error-color);
+}
