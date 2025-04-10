@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Contextual Vocab Helper",
+    "version": "1.0",
+    "description": "Select text on any page to get contextual definitions, word types, and examples using the Gemini API.",
+  
+    "permissions": [
+      "storage",
+      "contextMenus",
+      "activeTab",
+      "scripting"
+    ],
+  
+    "host_permissions": [
+      "<all_urls>"
+    ],
+  
+    "background": {
+      "service_worker": "js/background.js"
+    },
+  
+    "action": {
+      "default_popup": "html/popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      },
+      "default_title": "Contextual Vocab Helper"
+    },
+  
+    "options_page": "html/options.html",
+  
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
